@@ -12,9 +12,6 @@ const HeaderComponent = () => {
             <Link to="/" className="Nav__item">
               Intro
             </Link>{" "}
-            <Link to="/client" className="Nav__item ">
-              Client Home
-            </Link>
             <Link to="/user" className="Nav__item ">
               User Home
             </Link>

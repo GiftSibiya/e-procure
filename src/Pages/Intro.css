@@ -1,0 +1,100 @@
+* {
+  margin: 0px;
+}
+
+:root {
+  --appBlue: rgb(96, 173, 199);
+}
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.container {
+  display: flex;
+  width: 90vw;
+  height: 90vh;
+  border-radius: 20px;
+  background-color: white;
+}
+.leftSide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 55%;
+  border-radius: 20px 0px 0px 20px;
+  background-color: var(--appBlue);
+}
+.brand {
+  display: flex;
+  height: 20vh;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+.logo {
+}
+.slogan {
+}
+.actionText {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.rightSide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 45%;
+  border-radius: 0px 20px 20px 0px;
+  background-color: rgb(243, 230, 205);
+}
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.TextField {
+  margin-top: 10px;
+  width: 30vw;
+}
+.Button {
+  margin: 15px 0px;
+  height: 35px;
+  width: 100px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--appBlue);
+}
+.loginBox {
+  justify-content: space-between;
+  display: flex;
+}
+.checkContainer {
+  display: flex;
+  align-items: center;
+}
+.check {
+  margin-right: 10px;
+  height: 15px;
+  width: 15px;
+}
+.checkText {
+  font-size: 15px;
+}
+.noAcc {
+  margin: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+}
+.noAcc {
+  font-size: 16px;
+}

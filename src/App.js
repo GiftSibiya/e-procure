@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 //PAGE IMPORTS
 import Intro from "./Pages/Intro";
-import ClientHome from "./Pages/Client/ClientHome";
 import UserHome from "./Pages/User/UserHome";
 import AdminHome from "./Pages/Admin/AdminHome";
 import NoPage from "./Pages/NoPage";
@@ -15,7 +14,6 @@ function App() {
         <Route index element={<Intro />} />
         <Route path="/intro" element={<Intro />} />
         <Route path="/admin" element={<AdminHome />} />
-        <Route path="/client" element={<ClientHome />} />
         <Route path="/user" element={<UserHome />} />
         <Route path="*" element={<NoPage />} />
       </Routes>
