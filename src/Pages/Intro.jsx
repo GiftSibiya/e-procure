@@ -44,7 +44,9 @@ export default function Intro() {
 
               {/*Login Box */}
               <div className="loginBox">
-                <button className="Button">Log In</button>
+                <Link to="/user">
+                  <button className="Button">Log In</button>
+                </Link>
                 <div className="checkContainer">
                   <input className="check" type="checkbox" name="Name" id="" />
                   <p className="checkText">Remember Me</p>

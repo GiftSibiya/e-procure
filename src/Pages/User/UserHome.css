@@ -1,0 +1,10 @@
+* {
+  margin: 0;
+}
+
+:root {
+  --backgroundColor: #f0f0f0;
+}
+body {
+  background-color: var(--backgroundColor);
+}

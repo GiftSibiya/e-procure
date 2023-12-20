@@ -9,15 +9,16 @@ const HeaderComponent = () => {
         <div className="header">
           <h1 className="logo">E-PROCURE</h1>
           <div className="Nav">
-            <Link to="/" className="Nav__item">
-              Intro
-            </Link>{" "}
             <Link to="/user" className="Nav__item ">
-              User Home
+              Home
             </Link>
-            <Link to="/admin" className="Nav__item ">
-              Admin Panel
+            <Link to="/" className="Nav__item">
+              Log Out
             </Link>
+            <div className="profile">
+              <p className="profile__user">Khanyi Sadik</p>
+              <div className="profile__image"></div>
+            </div>
           </div>
         </div>
       </header>
