@@ -4,7 +4,43 @@
 
 :root {
   --backgroundColor: #f0f0f0;
+  --appGrey: #d8d8d8;
+  --appBlue: #406a8b;
+  --appLightBlue: #b2e7e8;
+  --appGreen: #8fb9aa;
+  --appOrange: #f2d096;
+  --appRed: #ed8975;
+  --app: #ed8975;
+  --appTextWhite: #d5d5d5;
 }
 body {
+  display: flex;
+  width: 100%;
   background-color: var(--backgroundColor);
+}
+aside {
+  display: flex;
+  justify-content: center;
+  margin: 20px 8px;
+  width: 18%;
+  height: 174vh;
+  border-radius: 20px;
+  background-color: var(--appGreen);
+}
+
+.user__info {
+  display: flex;
+  justify-content: center;
+  margin: 20px 8px;
+  border-radius: 20px;
+  width: 75vw;
+  height: 100px;
+  background-color: var(--app);
+}
+.mainSection {
+  margin: 40px 9px;
+  height: 150vh;
+  border-radius: 20px;
+  display: flex;
+  background-color: var(--appGrey);
 }

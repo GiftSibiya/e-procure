@@ -1,0 +1,20 @@
+.tab-bar {
+  display: flex;
+  width: 75vw;
+  background-color: #f0f0f0;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tab.active {
+  background-color: #b2e7e8;
+  color: #406a8b;
+}
+.tabHeader {
+  width: 75vw;
+}
