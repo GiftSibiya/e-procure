@@ -37,7 +37,7 @@ const TabView = () => {
           className={`tab ${activeTab === "Tenders" ? "active" : "unactive"}`}
           onClick={() => handleTabClick("Tenders")}
         >
-          Tenders
+          Browse Tenders
         </div>
         <div
           className={`tab ${

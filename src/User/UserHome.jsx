@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import HeaderComponent from "../../Components/Header/Header";
+import HeaderComponent from "./Components/Header/Header";
 import "./UserHome.css";
-import Footer from "../../Components/Footer/Footer";
-import TabView from "../../Components/TabView/TabView";
+import Footer from "./Components/Footer/Footer";
+import TabView from "./Components/TabView/TabView";
+import Aside from "./Components/Aside/Aside";
 
 export default function UserHome() {
   return (
@@ -12,7 +13,7 @@ export default function UserHome() {
         <HeaderComponent />
       </header>
       <body>
-        <aside>Aside</aside>
+        <Aside />
         <main>
           <section className="user__info">Hello Khanyi</section>
           <section className="mainSection">

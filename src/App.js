@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 //PAGE IMPORTS
-import Intro from "./Pages/Intro";
-import UserHome from "./Pages/User/UserHome";
-import AdminHome from "./Pages/Admin/AdminHome";
-import NoPage from "./Pages/NoPage";
+import Intro from "./User/Pages/Intro";
+import UserHome from "./User/UserHome";
+import AdminHome from "./Admin/AdminHome";
+import NoPage from "./User/Pages/NoPage";
 ////
 import "./App.css";
 

@@ -18,15 +18,6 @@ body {
   width: 100%;
   background-color: var(--backgroundColor);
 }
-aside {
-  display: flex;
-  justify-content: center;
-  margin: 20px 8px;
-  width: 18%;
-  height: 174vh;
-  border-radius: 20px;
-  background-color: var(--appGreen);
-}
 
 .user__info {
   display: flex;
