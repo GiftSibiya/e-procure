@@ -1,10 +1,20 @@
-// Import Dependencies //
+/// Import Dependencies ///
 
 import React, { useState } from "react";
+
+///--///
+
+/// Import Files ///
+
+// style sheet
 import "./TabView.css";
+
+// components
 import Tenders from "./Tenders/Tenders";
 import Applications from "./Applications/Applications";
 import Notifications from "./Notifications/Notifications";
+
+//--//
 
 const TendersContent = () => (
   <div className="tabHeader">

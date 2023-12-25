@@ -1,20 +1,31 @@
 * {
 }
-.formBodySection {
-  margin-bottom: 10px;
-}
-.formBody {
-  display: flex;
-  width: 75vw;
-  height: 174vh;
-  border-radius: 20px;
-  background-color: var(--appGrey);
-}
 .form {
-  border: 2px solid red;
-  width: 100%;
+  background-color: var(--appGrey);
+  border-radius: 20px;
 }
 .form__header {
   margin: 10px;
-  border: 2px solid blue;
+}
+.tab-bar {
+  display: flex;
+  margin: 10px 0px;
+  width: 75vw;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.tab.active {
+  margin: 5px;
+  background-color: #b2e7e8;
+  color: #406a8b;
+}
+.tabHeader {
+  width: 75vw;
 }

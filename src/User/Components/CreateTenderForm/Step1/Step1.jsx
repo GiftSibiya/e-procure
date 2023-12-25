@@ -1,7 +1,7 @@
 import React from "react";
 
 function Step1() {
-  return <div>Step1</div>;
+  return <div> Step 1 Stuff si here</div>;
 }
 
 export default Step1;
