@@ -1,3 +1,5 @@
+// Import Dependencies //
+
 import React, { useState } from "react";
 import "./TabView.css";
 import Tenders from "./Tenders/Tenders";

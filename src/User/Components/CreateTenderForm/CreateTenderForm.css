@@ -1,0 +1,20 @@
+* {
+}
+.formBodySection {
+  margin-bottom: 10px;
+}
+.formBody {
+  display: flex;
+  width: 75vw;
+  height: 174vh;
+  border-radius: 20px;
+  background-color: var(--appGrey);
+}
+.form {
+  border: 2px solid red;
+  width: 100%;
+}
+.form__header {
+  margin: 10px;
+  border: 2px solid blue;
+}

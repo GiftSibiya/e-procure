@@ -1,13 +1,14 @@
 .tab-bar {
   display: flex;
+  margin: 10px 0px;
   width: 75vw;
-  background-color: #f0f0f0;
 }
 
 .tab {
   flex: 1;
   padding: 10px;
   text-align: center;
+  border-radius: 20px;
   cursor: pointer;
 }
 

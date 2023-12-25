@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 //PAGE IMPORTS
-import Intro from "./User/Pages/Intro";
+import Intro from "./User/Pages/Intro/Intro";
 import UserHome from "./User/UserHome";
 import AdminHome from "./Admin/AdminHome";
 import NoPage from "./User/Pages/NoPage";
+import TenderCreate from "./User/Pages/TenderCreate/TenderCreate";
 ////
-import "./App.css";
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
         <Route path="/intro" element={<Intro />} />
         <Route path="/admin" element={<AdminHome />} />
         <Route path="/user" element={<UserHome />} />
+        <Route path="/tenderCreate" element={<TenderCreate />} />
         <Route path="*" element={<NoPage />} />
       </Routes>
     </BrowserRouter>

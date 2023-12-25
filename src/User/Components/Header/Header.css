@@ -18,14 +18,12 @@ header {
   height: 100px;
 }
 .header {
-  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: var(--appBlue);
 }
 .logo {
-  margin: 25px;
   font-weight: 800;
   color: var(--appTextWhite);
 }
@@ -33,7 +31,6 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-right: 25px;
 }
 .Nav__item {
   text-decoration: none;
