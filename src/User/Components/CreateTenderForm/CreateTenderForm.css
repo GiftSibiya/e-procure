@@ -3,13 +3,17 @@
 .form {
   background-color: var(--appGrey);
   border-radius: 20px;
+  height: 800px;
 }
 .form__header {
+  text-align: center;
+
   margin: 10px;
 }
 .tab-bar {
   display: flex;
-  margin: 10px 0px;
+  align-items: center;
+  margin: 10px 8px;
   width: 75vw;
 }
 
@@ -22,10 +26,9 @@
 }
 
 .tab.active {
-  margin: 5px;
   background-color: #b2e7e8;
   color: #406a8b;
 }
-.tabHeader {
+.tabContent {
   width: 75vw;
 }

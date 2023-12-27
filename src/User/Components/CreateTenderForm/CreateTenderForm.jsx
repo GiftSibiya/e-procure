@@ -18,27 +18,27 @@ import Step5 from "./Step5/Step5";
 //--//
 
 const Step1Content = () => (
-  <div className="tabHeader">
+  <div className="tabContent">
     <Step1 />
   </div>
 );
 const Step2Content = () => (
-  <div className="tabHeader">
+  <div className="tabContent">
     <Step2 />
   </div>
 );
 const Step3Content = () => (
-  <div className="tabHeader">
+  <div className="tabContent">
     <Step3 />
   </div>
 );
 const Step4Content = () => (
-  <div className="tabHeader">
+  <div className="tabContent">
     <Step4 />
   </div>
 );
 const Step5Content = () => (
-  <div className="tabHeader">
+  <div className="tabContent">
     <Step5 />
   </div>
 );

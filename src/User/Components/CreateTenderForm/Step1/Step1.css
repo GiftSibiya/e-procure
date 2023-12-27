@@ -1,0 +1,86 @@
+* {
+}
+
+.tenderForm {
+  border-radius: 10px;
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.tenderForm__info {
+  margin: 10px;
+  width: 30vw;
+}
+.tenderForm__desciption {
+  margin: 6px;
+  width: 20vw;
+  height: auto;
+}
+.tenderForm__textInput {
+  flex-wrap: wrap;
+}
+.tenderForm__field {
+  width: 90vw;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.row1 {
+  display: flex;
+  justify-content: space-between;
+}
+.tenderForm__small {
+  text-align: start;
+  margin: 6px;
+  width: 15vw;
+  height: 25px;
+  resize: none;
+}
+.tenderForm__medium {
+  box-sizing: border-box;
+  text-align: start;
+  width: 100%;
+  height: 100px;
+  resize: none;
+}
+
+.tenderInput--Large {
+  box-sizing: border-box;
+  width: 100%;
+  height: 350px;
+  resize: none;
+}
+.tenderForm__date {
+  height: 30px;
+  width: 15vw;
+}
+.tenderForm__section1 {
+  width: 20vw;
+}
+.tenderForm__name {
+  box-sizing: border-box;
+  width: 30vw;
+  margin: 6px;
+}
+.closing {
+  margin: 5px;
+}
+.row2 {
+  display: flex;
+  justify-content: space-between;
+}
+.fieldDescription {
+  max-width: 40vw;
+  margin: 6px;
+  height: auto;
+}
+.tenderForm__scope {
+  box-sizing: border-box;
+  margin: 6px;
+  width: 30vw;
+}
+.tenderForm__session {
+  width: 20vw;
+  height: 200px;
+}

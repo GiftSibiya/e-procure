@@ -10,17 +10,10 @@ import React, { useState } from "react";
 import "./TabView.css";
 
 // components
-import Tenders from "./Tenders/Tenders";
 import Applications from "./Applications/Applications";
 import Notifications from "./Notifications/Notifications";
 
 //--//
-
-const TendersContent = () => (
-  <div className="tabHeader">
-    <Tenders />
-  </div>
-);
 
 const ApplicationsContent = () => (
   <div className="tabHeader">
@@ -46,12 +39,6 @@ const TabView = () => {
     <div>
       <div className="tab-bar">
         <div
-          className={`tab ${activeTab === "Tenders" ? "active" : "unactive"}`}
-          onClick={() => handleTabClick("Tenders")}
-        >
-          Browse Tenders
-        </div>
-        <div
           className={`tab ${
             activeTab === "Applications" ? "active" : "unactive"
           }`}
@@ -70,7 +57,6 @@ const TabView = () => {
       </div>
       <div className="tab-content">
         {activeTab === "Applications" && <ApplicationsContent />}
-        {activeTab === "Tenders" && <TendersContent />}
         {activeTab === "Notifications" && <NotificationsContent />}
       </div>
     </div>
