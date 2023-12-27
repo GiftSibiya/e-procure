@@ -13,23 +13,31 @@
   --app: #ed8975;
   --appTextWhite: #d5d5d5;
 }
+.header {
+  box-sizing: border-box;
+  width: 100%;
+}
 body {
   display: flex;
-  width: 100%;
+  flex-direction: column;
+  box-sizing: border-box;
   background-color: var(--backgroundColor);
+}
+.bodySection {
+  display: flex;
+  margin: 15px 0px;
 }
 
 .user__info {
   display: flex;
   justify-content: center;
-  margin: 20px 8px;
   border-radius: 20px;
+  margin-bottom: 10px;
   width: 75vw;
   height: 100px;
   background-color: var(--app);
 }
 .mainSection {
-  margin: 40px 9px;
   height: 150vh;
   border-radius: 20px;
   display: flex;

@@ -15,6 +15,9 @@ const HeaderComponent = () => {
             <Link to="/" className="Nav__item">
               Log Out
             </Link>
+            <Link to="" className="Nav__item">
+              Queries
+            </Link>
             <div className="profile">
               <p className="profile__user">Khanyi Sadik</p>
               <div className="profile__image"></div>
