@@ -4,14 +4,15 @@ require("dotenv").config();
 const express = require("express");
 const connectToDb = require("./ConnectToDb");
 const Tender = require("./models/step1");
+const cors = require("cors");
 //--//
 
 // starting/calling ou express app //
 
 const app = express();
-
-// Give express glasses so it can see json
 app.use(express.json());
+app.use(cors());
+// Give express glasses so it can see json
 
 //-//
 connectToDb();
@@ -42,11 +43,22 @@ app.post("/tenders", async (req, res) => {
   });
 
   // Sespond with sent note
-  res.json({ tender: tender });
+  try {
+    res.json({ tender: tender });
+    console.log("Data Has been sent to mongo");
+  } catch (err) {
+    console.log(`Could not ge the data back: ${err}`);
+  }
 });
 
-// 300 is our frontend and 4000 is our backend.
+// 3000 is our frontend and 4000 is our backend./
 
-app.listen(process.env.PORT, () => {
-  console.log(`server is running on port ${process.env.PORT}`);
+app.listen(process.env.PORT, async () => {
+  try {
+    console.log(`server is running on port ${process.env.PORT}`);
+  } catch (err) {
+    console.log(
+      `couldn't start the server on port ${process.env.PORT}, ${err}`
+    );
+  }
 });
