@@ -39,9 +39,15 @@ function Step1() {
       });
 
       if (result.ok) {
-        result = await result.json(); // Note the parentheses here
+        result = await result.json();
         localStorage.setItem("tender", JSON.stringify(result));
         console.log("Data has been sent to mongo", result);
+        alert("Tender has been submited");
+
+        // Redirect the user to http://localhost:3000/user
+        window.location.href = "http://localhost:3000/user";
+        // Alternatively, if you're using React Router, you can use history.push("/user")
+        // or any other navigation method based on your routing setup.
       } else {
         console.error("Error submitting the form");
       }
