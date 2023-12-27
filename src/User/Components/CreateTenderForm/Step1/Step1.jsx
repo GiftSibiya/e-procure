@@ -48,7 +48,6 @@ function Step1() {
                 type="Date"
                 name="tenderName"
                 id=""
-                placeholder="Closing Date"
               />
             </div>
           </div>
