@@ -16,8 +16,11 @@ function TenderItem() {
       <div className="itemRow">
         {/* item column 1*/}
 
-        <div className="itemColumn">
+        <div className="itemColumn itemName">
           <p className="itemHeader">Tender Name</p>
+          <p className="itemName__name">
+            Tender description will benplaced here of all places
+          </p>
         </div>
       </div>
       {/* item Column 2 */}

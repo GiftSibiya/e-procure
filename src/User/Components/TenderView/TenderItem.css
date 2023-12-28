@@ -40,11 +40,23 @@
   align-items: center;
   justify-content: space-around;
 }
+
+/* Item name   */
+.itemName {
+  display: flex;
+  flex-direction: column;
+}
+
 .itemHeader {
   display: inline;
   font-size: 15px;
   text-align: center;
+  margin-bottom: 10px;
 }
+.itemName__name {
+  font-size: 12px;
+}
+
 .itemPost__date {
   display: inline;
   font-size: 11px;

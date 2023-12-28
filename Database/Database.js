@@ -70,3 +70,17 @@ app.post("/submit", (req, res) => {
   // Perform some logic and send a response
   res.json({ message: "Data received successfully", data });
 });
+// return database data here
+app.get("/tenderView", async (req, res) => {
+  try {
+    // Retrieve all tenders from the database
+    const allTenders = await Tender.find();
+
+    // Respond with the array of tenders
+    res.json({ tenders: allTenders });
+  } catch (err) {
+    console.error(`Error fetching data from the database: ${err}`);
+    // Handle the error and send an appropriate response
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
