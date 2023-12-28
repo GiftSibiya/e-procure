@@ -18,7 +18,9 @@ function Aside() {
       <Link to="/tenderCreate">
         <p className="aside__menu">Create Tender</p>
       </Link>
-      <p className="aside__menu">Your Tenders</p>
+      <Link to={"/tenderView"}>
+        <p className="aside__menu">Your Tenders</p>
+      </Link>
     </section>
   );
 }
