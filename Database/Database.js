@@ -62,3 +62,11 @@ app.listen(process.env.PORT, async () => {
     );
   }
 });
+
+app.post("/submit", (req, res) => {
+  // Process the data from the request body
+  const data = req.body;
+
+  // Perform some logic and send a response
+  res.json({ message: "Data received successfully", data });
+});

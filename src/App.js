@@ -1,11 +1,17 @@
+/// Import Dependencies ///
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-//PAGE IMPORTS
+
+//--//
+
+/// PAGE IMPORTS ///
 import Intro from "./User/Pages/Intro/Intro";
 import UserHome from "./User/UserHome";
 import AdminHome from "./Admin/AdminHome";
 import NoPage from "./User/Pages/NoPage";
 import TenderCreate from "./User/Pages/TenderCreate/TenderCreate";
-////
+import TenderView from "./User/Pages/TenderView/TenderView";
+
+//--//
 
 function App() {
   return (
@@ -16,6 +22,7 @@ function App() {
         <Route path="/admin" element={<AdminHome />} />
         <Route path="/user" element={<UserHome />} />
         <Route path="/tenderCreate" element={<TenderCreate />} />
+        <Route path="/tenderView" element={<TenderView />} />
         <Route path="*" element={<NoPage />} />
       </Routes>
     </BrowserRouter>

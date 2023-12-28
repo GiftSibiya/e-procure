@@ -1,5 +1,12 @@
+/// Import Depenencies ///
 import React from "react";
 import { Link } from "react-router-dom";
+
+//--//
+
+/// Import Files ///
+
+//--//
 
 export default function ClientHome() {
   return (
