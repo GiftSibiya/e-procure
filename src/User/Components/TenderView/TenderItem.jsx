@@ -32,15 +32,21 @@ function TenderItem(props) {
       {/* item Column 3 */}
 
       <div className="itemRow">
-        <div className="itemColumn3">
-          {/* Posted Date */}
-          <div className="itemPos">
-            <p className="itemHeader">Tender Posted</p>
+        <div className="itemColumn itemColumn3">
+          {/* Bid Bumber */}
+          <div className="itemBid">
+            <p className="itemHeader">Bid No.</p>
             <br />
             <p className="itemPost__date">{props.bid}</p>
           </div>
-          {/* Closing Date */}
+          {/* Posted Date */}
           <div className="itemPos">
+            <p className="itemHeader">Posted Date</p>
+            <br />
+            <p className="itemPost__date">{props.issue}</p>
+          </div>
+          {/* Closing Date */}
+          <div className="itemClosing">
             <p className="itemHeader">Closing Date</p>
             <br />
             <p className="itemPost__date">{props.closing}</p>

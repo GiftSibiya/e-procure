@@ -7,6 +7,7 @@
   margin: 15px 0px;
   border-radius: 10px;
   background-color: var(--appGreen);
+  padding: 10px;
 }
 .itemRow {
   height: 100%;
@@ -19,6 +20,9 @@
 .itemColumn {
   display: flex;
   justify-content: center;
+  border-radius: 10px;
+  border: 1px solid grey;
+  margin: 0px 2px;
 }
 .PostDescription {
   display: flex;
@@ -27,20 +31,23 @@
   height: 100%;
 }
 .itemDescription {
+  text-align: center;
+  font-size: 15px;
   height: 100%;
+  border-radius: 10px;
 }
 
 .itemColumn3 {
   display: flex;
-  height: 100%;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  height: 100%;
 }
 
 /* Item name   */
 .itemName {
   display: flex;
+  text-align: center;
   flex-direction: column;
 }
 
@@ -48,14 +55,21 @@
   display: inline;
   font-size: 15px;
   text-align: center;
-  margin-bottom: 10px;
+  margin: 12px 0px 5px 0px;
 }
 .itemName__name {
   font-size: 12px;
+  width: 90%;
+  height: 100px;
+  padding: 5px 0px;
 }
 
 .itemPost__date {
+  text-align: center;
   display: inline;
   font-size: 11px;
   text-align: center;
+}
+.itemPos {
+  margin: 12px 0px;
 }

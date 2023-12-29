@@ -28,6 +28,7 @@ app.post("/tenders", async (req, res) => {
   const tenderName = req.body.tenderName;
   const tenderBid = req.body.tenderBid;
   const tenderScope = req.body.tenderScope;
+  const tenderIssue = req.body.tenderIssue;
   const tenderClosing = req.body.tenderClosing;
   const tenderSessionDate = req.body.tenderSessionDate;
   const tenderVenue = req.body.tenderVenue;
@@ -37,6 +38,7 @@ app.post("/tenders", async (req, res) => {
     tenderName: tenderName,
     tenderBid: tenderBid,
     tenderScope: tenderScope,
+    tenderIssue: tenderIssue,
     tenderClosing: tenderClosing,
     tenderSessionDate: tenderSessionDate,
     tenderVenue: tenderVenue,
@@ -84,6 +86,7 @@ app.get("/tenderView", async (req, res) => {
         tenderName,
         tenderScope,
         tenderBid,
+        tenderIssue,
         tenderClosing,
         tenderSessionDate,
         tenderVenue,
@@ -92,6 +95,7 @@ app.get("/tenderView", async (req, res) => {
       console.log(`Tender Name: ${tenderName}`);
       console.log(`Tender Scope: ${tenderScope}`);
       console.log(`Tender Bid: ${tenderBid}`);
+      console.log(`Tender Issue: ${tenderIssue}`);
       console.log(`Tender Closing: ${tenderClosing}`);
       console.log(`Tender Session Date: ${tenderSessionDate}`);
       console.log(`Tender Venue: ${tenderVenue}`);

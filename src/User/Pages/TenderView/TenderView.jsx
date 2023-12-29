@@ -43,6 +43,7 @@ export default function TenderView() {
 
               name={tender.tenderName}
               description={tender.tenderScope}
+              issue={tender.tenderIssue}
               bid={tender.tenderBid}
               closing={tender.tenderClosing}
             />
