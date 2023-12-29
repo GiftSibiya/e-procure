@@ -70,3 +70,37 @@ app.post("/submit", (req, res) => {
   // Perform some logic and send a response
   res.json({ message: "Data received successfully", data });
 });
+
+// return database data here //
+
+app.get("/tenderView", async (req, res) => {
+  try {
+    const allTenders = await Tender.find();
+
+    // Loop through each tender and log specific elements
+    allTenders.forEach((tender) => {
+      const {
+        _id,
+        tenderName,
+        tenderScope,
+        tenderBid,
+        tenderClosing,
+        tenderSessionDate,
+        tenderVenue,
+      } = tender;
+      console.log(`Tender ID: ${_id}`);
+      console.log(`Tender Name: ${tenderName}`);
+      console.log(`Tender Scope: ${tenderScope}`);
+      console.log(`Tender Bid: ${tenderBid}`);
+      console.log(`Tender Closing: ${tenderClosing}`);
+      console.log(`Tender Session Date: ${tenderSessionDate}`);
+      console.log(`Tender Venue: ${tenderVenue}`);
+      console.log("---------------");
+    });
+
+    res.json({ tenders: allTenders });
+  } catch (err) {
+    console.error(`Error fetching data from the database: ${err}`);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});

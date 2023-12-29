@@ -6,7 +6,7 @@ import React from "react";
 import "./TenderItem.css";
 //--//
 
-function TenderItem() {
+function TenderItem(props) {
   return (
     // main container
 
@@ -16,8 +16,9 @@ function TenderItem() {
       <div className="itemRow">
         {/* item column 1*/}
 
-        <div className="itemColumn">
+        <div className="itemColumn itemName">
           <p className="itemHeader">Tender Name</p>
+          <p className="itemName__name">{props.name}</p>
         </div>
       </div>
       {/* item Column 2 */}
@@ -25,7 +26,7 @@ function TenderItem() {
       <div className="itemRow2">
         <div className="itemColumn PostDescription">
           <p className="itemHeader">Description</p>
-          <p className="itemDescription">Description</p>
+          <p className="itemDescription">{props.description}</p>
         </div>
       </div>
       {/* item Column 3 */}
@@ -36,13 +37,13 @@ function TenderItem() {
           <div className="itemPos">
             <p className="itemHeader">Tender Posted</p>
             <br />
-            <p className="itemPost__date">24 December 2023</p>
+            <p className="itemPost__date">{props.bid}</p>
           </div>
           {/* Closing Date */}
           <div className="itemPos">
-            <p className="itemHeader">Tender Posted</p>
+            <p className="itemHeader">Closing Date</p>
             <br />
-            <p className="itemPost__date">24 December 2023</p>
+            <p className="itemPost__date">{props.closing}</p>
           </div>
         </div>
       </div>

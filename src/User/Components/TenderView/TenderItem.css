@@ -4,18 +4,17 @@
   justify-content: space-between;
   width: 60vw;
   height: 150px;
+  margin: 15px 0px;
   border-radius: 10px;
-  border: 2px solid red;
+  background-color: var(--appGreen);
 }
 .itemRow {
   height: 100%;
   flex: 1;
-  border: 2px solid black;
 }
 .itemRow2 {
   height: 100%;
   flex: 2;
-  border: 2px solid black;
 }
 .itemColumn {
   display: flex;
@@ -26,11 +25,9 @@
   flex-direction: column;
   justify-content: flex-start;
   height: 100%;
-  border: 2px solid pink;
 }
 .itemDescription {
   height: 100%;
-  border: 2px solid pink;
 }
 
 .itemColumn3 {
@@ -40,11 +37,23 @@
   align-items: center;
   justify-content: space-around;
 }
+
+/* Item name   */
+.itemName {
+  display: flex;
+  flex-direction: column;
+}
+
 .itemHeader {
   display: inline;
   font-size: 15px;
   text-align: center;
+  margin-bottom: 10px;
 }
+.itemName__name {
+  font-size: 12px;
+}
+
 .itemPost__date {
   display: inline;
   font-size: 11px;
