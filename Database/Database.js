@@ -108,3 +108,20 @@ app.get("/tenderView", async (req, res) => {
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
+
+app.get("/tender/:id", async (req, res) => {
+  const tenderId = req.params.id;
+
+  try {
+    const tender = await Tender.findById(tenderId);
+
+    if (!tender) {
+      return res.status(404).json({ error: "Tender not found" });
+    }
+
+    res.json({ tender });
+  } catch (error) {
+    console.error("Error fetching tender details:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});

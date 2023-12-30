@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import HeaderComponent from "../../Components/Header/Header";
 import Aside from "../../Components/Aside/Aside";
 import TenderItem from "../../Components/TenderView/TenderItem";
-import axios from "axios"; // Import axios for making HTTP requests
+import axios from "axios";
 
 import "./TenderView.css";
 
-export default function TenderView() {
+function TenderView() {
   const [tenders, setTenders] = useState([]);
 
   useEffect(() => {
-    // Fetch data from the server when the component mounts
     const fetchData = async () => {
       try {
         const response = await axios.get("http://localhost:4000/tenderView");
@@ -21,7 +21,7 @@ export default function TenderView() {
     };
 
     fetchData();
-  }, []); // The empty dependency array ensures the effect runs only once after the initial render
+  }, []);
 
   return (
     <>
@@ -32,24 +32,24 @@ export default function TenderView() {
         <Aside />
         <section className="tenderViewContainer">
           <h3 className="tenderView__Header">View Your Active Tenders</h3>
-
-          {/* Map through tenders and render TenderItem for each tender */}
-
           {tenders.map((tender) => (
-            <TenderItem
-              key={tender._id}
-              tender={tender}
-              // variables from database
-
-              name={tender.tenderName}
-              description={tender.tenderScope}
-              issue={tender.tenderIssue}
-              bid={tender.tenderBid}
-              closing={tender.tenderClosing}
-            />
+            <Link key={tender._id} to={`/tender/${tender._id}`}>
+              {/* Clickable element, like the tender name */}
+              <TenderItem
+                key={tender._id}
+                tender={tender}
+                name={tender.tenderName}
+                description={tender.tenderScope}
+                issue={tender.tenderIssue}
+                bid={tender.tenderBid}
+                closing={tender.tenderClosing}
+              />
+            </Link>
           ))}
         </section>
       </body>
     </>
   );
 }
+
+export default TenderView;
