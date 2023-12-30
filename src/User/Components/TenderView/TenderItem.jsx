@@ -1,5 +1,6 @@
 /// Import Dependancies ///
 import React from "react";
+import axios from "axios";
 
 //-//
 /// Import Files ///
@@ -7,7 +8,7 @@ import "./TenderItem.css";
 import { Link } from "react-router-dom";
 //--//
 
-function TenderItem({ tender }) {
+function TenderItem({ tender, onDelete }) {
   const {
     _id,
     tenderName,
@@ -16,6 +17,23 @@ function TenderItem({ tender }) {
     tenderBid,
     tenderClosing,
   } = tender;
+
+  const handleDelete = async () => {
+    const confirmDelete = window.confirm(
+      "Are you sure you want to delete this tender?"
+    );
+
+    if (confirmDelete) {
+      try {
+        await axios.delete(`http://localhost:4000/tender/${_id}`);
+        // Call the onDelete function (passed as a prop) to update the UI or perform any other actions
+        onDelete(_id);
+        console.log("Tender deleted successfully!");
+      } catch (error) {
+        console.error("Error deleting tender:", error);
+      }
+    }
+  };
 
   return (
     // main container
@@ -70,8 +88,12 @@ function TenderItem({ tender }) {
           <Link to={`/tender/${_id}`}>
             <button className="crudBtn">View Details</button>
           </Link>
-          <button className="crudBtn">Edit Details</button>
-          <button className="crudBtn">Delete Tender</button>
+          <Link to={`/tender/${_id}/edit`}>
+            <button className="crudBtn">Edit Details</button>
+          </Link>
+          <button className="crudBtn" onClick={handleDelete}>
+            Delete Tender
+          </button>
         </div>
       </div>
     </section>
