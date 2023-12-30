@@ -91,15 +91,15 @@ app.get("/tenderView", async (req, res) => {
         tenderSessionDate,
         tenderVenue,
       } = tender;
-      console.log(`Tender ID: ${_id}`);
-      console.log(`Tender Name: ${tenderName}`);
-      console.log(`Tender Scope: ${tenderScope}`);
-      console.log(`Tender Bid: ${tenderBid}`);
-      console.log(`Tender Issue: ${tenderIssue}`);
-      console.log(`Tender Closing: ${tenderClosing}`);
-      console.log(`Tender Session Date: ${tenderSessionDate}`);
-      console.log(`Tender Venue: ${tenderVenue}`);
-      console.log("---------------");
+      // console.log(`Tender ID: ${_id}`);
+      // console.log(`Tender Name: ${tenderName}`);
+      // console.log(`Tender Scope: ${tenderScope}`);
+      // console.log(`Tender Bid: ${tenderBid}`);
+      // console.log(`Tender Issue: ${tenderIssue}`);
+      // console.log(`Tender Closing: ${tenderClosing}`);
+      // console.log(`Tender Session Date: ${tenderSessionDate}`);
+      // console.log(`Tender Venue: ${tenderVenue}`);
+      // console.log("---------------");
     });
 
     res.json({ tenders: allTenders });

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import HeaderComponent from "../../Components/Header/Header";
+import Aside from "../../Components/Aside/Aside";
 
 function TenderDetails() {
   const { id } = useParams();
@@ -20,15 +22,25 @@ function TenderDetails() {
   }, [id]);
 
   return (
-    <div>
-      <h3>Tender Details</h3>
-      <p>Name: {tender.tenderName}</p>
-      <p>Description: {tender.tenderScope}</p>
-      <p>Issue: {tender.tenderIssue}</p>
-      <p>Bid: {tender.tenderBid}</p>
-      <p>Closing: {tender.tenderClosing}</p>
-      {/* Add more details as needed */}
-    </div>
+    <>
+      <nav>
+        {" "}
+        <HeaderComponent />{" "}
+      </nav>
+      <body className="createBodySection">
+        {" "}
+        <Aside />{" "}
+        <div>
+          <h3>Tender Details</h3>
+          <p>Name: {tender.tenderName}</p>
+          <p>Description: {tender.tenderScope}</p>
+          <p>Issue: {tender.tenderIssue}</p>
+          <p>Bid: {tender.tenderBid}</p>
+          <p>Closing: {tender.tenderClosing}</p>
+          {/* Add more details as needed */}
+        </div>
+      </body>
+    </>
   );
 }
 

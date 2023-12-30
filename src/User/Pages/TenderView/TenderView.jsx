@@ -33,18 +33,15 @@ function TenderView() {
         <section className="tenderViewContainer">
           <h3 className="tenderView__Header">View Your Active Tenders</h3>
           {tenders.map((tender) => (
-            <Link key={tender._id} to={`/tender/${tender._id}`}>
-              {/* Clickable element, like the tender name */}
-              <TenderItem
-                key={tender._id}
-                tender={tender}
-                name={tender.tenderName}
-                description={tender.tenderScope}
-                issue={tender.tenderIssue}
-                bid={tender.tenderBid}
-                closing={tender.tenderClosing}
-              />
-            </Link>
+            <TenderItem
+              key={tender._id}
+              tender={tender}
+              name={tender.tenderName}
+              description={tender.tenderScope}
+              issue={tender.tenderIssue}
+              bid={tender.tenderBid}
+              closing={tender.tenderClosing}
+            />
           ))}
         </section>
       </body>
