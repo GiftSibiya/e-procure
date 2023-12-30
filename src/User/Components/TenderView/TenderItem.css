@@ -1,12 +1,17 @@
 /* main Container */
 .itemContainer {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   width: 60vw;
   height: 150px;
-  margin: 15px 0px;
+  margin: 20px 0px;
   border-radius: 10px;
   background-color: var(--appGreen);
+  padding: 10px;
+}
+.tenderBox {
+  display: flex;
 }
 .itemRow {
   height: 100%;
@@ -19,6 +24,9 @@
 .itemColumn {
   display: flex;
   justify-content: center;
+  border-radius: 10px;
+  border: 1px solid grey;
+  margin: 0px 2px;
 }
 .PostDescription {
   display: flex;
@@ -27,20 +35,24 @@
   height: 100%;
 }
 .itemDescription {
+  text-align: center;
+  font-size: 15px;
   height: 100%;
+  border-radius: 10px;
 }
 
 .itemColumn3 {
+  text-align: center;
   display: flex;
-  height: 100%;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  height: 100%;
 }
 
 /* Item name   */
 .itemName {
   display: flex;
+  text-align: center;
   flex-direction: column;
 }
 
@@ -48,14 +60,39 @@
   display: inline;
   font-size: 15px;
   text-align: center;
-  margin-bottom: 10px;
+  margin: 12px 0px 5px 0px;
 }
 .itemName__name {
   font-size: 12px;
+  width: 90%;
+  height: 100px;
+  padding: 5px 0px;
 }
 
 .itemPost__date {
+  text-align: center;
   display: inline;
   font-size: 11px;
   text-align: center;
+}
+.itemPos {
+  margin: 12px 0px;
+}
+.crudBar {
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+}
+.crudButttons {
+  display: flex;
+  padding: 5px 0px;
+  justify-content: center;
+  width: 80vw;
+  border-radius: 0px 0px 10px 10px;
+}
+.crudBtn {
+  cursor: pointer;
+  border: 1px solid grey;
+  margin: 0px 5px;
+  border-radius: 8px;
 }

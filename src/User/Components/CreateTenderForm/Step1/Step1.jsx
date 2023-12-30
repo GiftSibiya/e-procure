@@ -16,6 +16,7 @@ function Step1() {
   const [tenderName, setTenderName] = useState("");
   const [tenderScope, setTenderScope] = useState("");
   const [tenderBid, setTenderBid] = useState("");
+  const [tenderIssue, setTenderIssue] = useState("");
   const [tenderClosing, setTenderClosing] = useState("");
   const [tenderSessionDate, setTenderSessionDate] = useState("");
   const [tenderVenue, setTenderVenue] = useState("");
@@ -32,6 +33,7 @@ function Step1() {
           tenderName,
           tenderScope,
           tenderBid,
+          tenderIssue,
           tenderClosing,
           tenderSessionDate,
           tenderVenue,
@@ -44,10 +46,9 @@ function Step1() {
         console.log("Data has been sent to mongo", result);
         alert("Tender has been submited");
 
-        // Redirect the user to http://localhost:3000/user
+        // Redirect the user to user page
+
         window.location.href = "http://localhost:3000/user";
-        // Alternatively, if you're using React Router, you can use history.push("/user")
-        // or any other navigation method based on your routing setup.
       } else {
         console.error("Error submitting the form");
       }
@@ -75,10 +76,12 @@ function Step1() {
               onChange={(e) => setTenderName(e.target.value)}
             />
           </div>
+
           {/* Section 1 */}
 
           <div className="tenderForm__section1">
             {/* Bid Number */}
+
             <div className="tenderForm__bid">
               <p className="tenderForm__desciption">Bid Number</p>
               <textarea
@@ -91,6 +94,21 @@ function Step1() {
                 onChange={(e) => setTenderBid(e.target.value)}
               />
             </div>
+
+            {/* Issuing  Date */}
+
+            <div className="closing">
+              <p className="fieldDescription">Issue Date</p>
+              <input
+                className="tenderForm__date"
+                type="Date"
+                name="tenderClosing"
+                id=""
+                value={tenderIssue}
+                onChange={(e) => setTenderIssue(e.target.value)}
+              />
+            </div>
+
             {/* Closing Date */}
 
             <div className="closing">
@@ -108,6 +126,7 @@ function Step1() {
         </div>
 
         {/* Second Row */}
+
         <div className="row2">
           <div className="tenderForm__scope">
             <p className="fieldDescription">Scope Of Work</p>
@@ -122,21 +141,25 @@ function Step1() {
             />
           </div>
           <div className="tenderForm__section2">
+            {/* Session Date an Time */}
+
             <div className="tenderForm__session">
               <p className="fieldDescription">
                 NON-COMPULSORY BRIEFING SESSION DATE AND TIME
               </p>
-              <textarea
-                className="tenderForm__textInput tenderForm__medium {
+              <input
+                className="tenderForm__textInput tenderForm__date {
                   "
-                type="text"
+                type="Date"
                 name="tenderSessionDate"
                 id=""
-                placeholder="Breifing session / date"
                 value={tenderSessionDate}
                 onChange={(e) => setTenderSessionDate(e.target.value)}
               />
+              <input className="tenderForm__date" type="Time" name="" id="" />
             </div>
+
+            {/* Session Venue */}
             <div className="tenderForm__session">
               <p className="fieldDescription">BRIEFING SESSION VENUE</p>
               <textarea

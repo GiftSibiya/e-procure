@@ -28,6 +28,7 @@ app.post("/tenders", async (req, res) => {
   const tenderName = req.body.tenderName;
   const tenderBid = req.body.tenderBid;
   const tenderScope = req.body.tenderScope;
+  const tenderIssue = req.body.tenderIssue;
   const tenderClosing = req.body.tenderClosing;
   const tenderSessionDate = req.body.tenderSessionDate;
   const tenderVenue = req.body.tenderVenue;
@@ -37,6 +38,7 @@ app.post("/tenders", async (req, res) => {
     tenderName: tenderName,
     tenderBid: tenderBid,
     tenderScope: tenderScope,
+    tenderIssue: tenderIssue,
     tenderClosing: tenderClosing,
     tenderSessionDate: tenderSessionDate,
     tenderVenue: tenderVenue,
@@ -84,23 +86,42 @@ app.get("/tenderView", async (req, res) => {
         tenderName,
         tenderScope,
         tenderBid,
+        tenderIssue,
         tenderClosing,
         tenderSessionDate,
         tenderVenue,
       } = tender;
-      console.log(`Tender ID: ${_id}`);
-      console.log(`Tender Name: ${tenderName}`);
-      console.log(`Tender Scope: ${tenderScope}`);
-      console.log(`Tender Bid: ${tenderBid}`);
-      console.log(`Tender Closing: ${tenderClosing}`);
-      console.log(`Tender Session Date: ${tenderSessionDate}`);
-      console.log(`Tender Venue: ${tenderVenue}`);
-      console.log("---------------");
+      // console.log(`Tender ID: ${_id}`);
+      // console.log(`Tender Name: ${tenderName}`);
+      // console.log(`Tender Scope: ${tenderScope}`);
+      // console.log(`Tender Bid: ${tenderBid}`);
+      // console.log(`Tender Issue: ${tenderIssue}`);
+      // console.log(`Tender Closing: ${tenderClosing}`);
+      // console.log(`Tender Session Date: ${tenderSessionDate}`);
+      // console.log(`Tender Venue: ${tenderVenue}`);
+      // console.log("---------------");
     });
 
     res.json({ tenders: allTenders });
   } catch (err) {
     console.error(`Error fetching data from the database: ${err}`);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
+app.get("/tender/:id", async (req, res) => {
+  const tenderId = req.params.id;
+
+  try {
+    const tender = await Tender.findById(tenderId);
+
+    if (!tender) {
+      return res.status(404).json({ error: "Tender not found" });
+    }
+
+    res.json({ tender });
+  } catch (error) {
+    console.error("Error fetching tender details:", error);
     res.status(500).json({ error: "Internal Server Error" });
   }
 });

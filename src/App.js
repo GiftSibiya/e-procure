@@ -10,6 +10,8 @@ import AdminHome from "./Admin/AdminHome";
 import NoPage from "./User/Pages/NoPage";
 import TenderCreate from "./User/Pages/TenderCreate/TenderCreate";
 import TenderView from "./User/Pages/TenderView/TenderView";
+import TenderDetails from "./User/Pages/TenderDetails/tenderDetails";
+import TenderEdit from "./User/Pages/TenderEdit/TenderEdit";
 
 //--//
 
@@ -23,6 +25,9 @@ function App() {
         <Route path="/user" element={<UserHome />} />
         <Route path="/tenderCreate" element={<TenderCreate />} />
         <Route path="/tenderView" element={<TenderView />} />
+        <Route path="/tender/:id" element={<TenderDetails />} />
+        <Route path="/tender/:id/edit" element={<TenderEdit />} />
+
         <Route path="*" element={<NoPage />} />
       </Routes>
     </BrowserRouter>
