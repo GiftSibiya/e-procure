@@ -1,11 +1,11 @@
+/// Import Dependencies ///
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import HeaderComponent from "../../Components/Header";
-import Aside from "../../Components/Aside/Aside";
-import TenderItem from "../../Components/TenderView/TenderItem";
-import axios from "axios";
+import HeaderComponent from "../Components/Header";
+//--//
 
-import "./TenderView.css";
+import Aside from "../Components/Aside";
+import TenderItem from "../Components/TenderView/TenderItem";
+import axios from "axios";
 
 function TenderView() {
   const [tenders, setTenders] = useState([]);
@@ -28,10 +28,10 @@ function TenderView() {
       <nav>
         <HeaderComponent />
       </nav>
-      <body className="createBodySection">
+      <body className="flex my-10">
         <Aside />
-        <section className="tenderViewContainer">
-          <h3 className="tenderView__Header">View Your Active Tenders</h3>
+        <section className="flex-col items-center rounded-md bg-backgroundColor w-full h-[800px]">
+          <h3 className="text-center">View Your Active Tenders</h3>
           {tenders.map((tender) => (
             <TenderItem
               key={tender._id}

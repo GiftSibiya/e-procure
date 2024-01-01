@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import HeaderComponent from "../../Components/Header";
-import Aside from "../../Components/Aside/Aside";
+import Aside from "../../Components/Aside";
 
 function TenderEdit() {
   const { id } = useParams();

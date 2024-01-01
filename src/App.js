@@ -9,7 +9,7 @@ import UserHome from "./User/UserHome";
 import AdminHome from "./Admin/AdminHome";
 import NoPage from "./User/Pages/NoPage";
 import TenderCreate from "./User/Pages/TenderCreate/TenderCreate";
-import TenderView from "./User/Pages/TenderView/TenderView";
+import TenderView from "./User/Pages/TenderView";
 import TenderDetails from "./User/Pages/TenderDetails/tenderDetails";
 import TenderEdit from "./User/Pages/TenderEdit/TenderEdit";
 
