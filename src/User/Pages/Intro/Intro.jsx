@@ -28,25 +28,30 @@ export default function Intro() {
             <div className="loginContainer">
               <p className="login__text">Free yourself Today</p>
               <h2 className="logIn">Log in</h2>
-
-              <textarea
-                className="TextField"
-                name="Username"
-                id="Username"
-                placeholder="Username"
-              ></textarea>
-              <textarea
-                className="TextField"
-                name="Password"
-                id="Password"
-                placeholder="Password"
-              ></textarea>
+              <form>
+                <textarea
+                  className="TextField"
+                  name="Username"
+                  id="Username"
+                  placeholder="Username"
+                  required
+                ></textarea>
+                <textarea
+                  className="TextField"
+                  name="Password"
+                  id="Password"
+                  placeholder="Password"
+                  required
+                ></textarea>
+                <Link to="/user">
+                  <button className="Button" type="submit">
+                    Log In
+                  </button>
+                </Link>
+              </form>
 
               {/*Login Box */}
               <div className="loginBox">
-                <Link to="/user">
-                  <button className="Button">Log In</button>
-                </Link>
                 <div className="checkContainer">
                   <input className="check" type="checkbox" name="Name" id="" />
                   <p className="checkText">Remember Me</p>
