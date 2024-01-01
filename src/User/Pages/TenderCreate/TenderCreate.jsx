@@ -2,7 +2,7 @@
 
 import React from "react";
 import HeaderComponent from "../../Components/Header";
-import Aside from "../../Components/Aside/Aside";
+import Aside from "../../Components/Aside";
 import CreateTenderForm from "../../Components/CreateTenderForm/CreateTenderForm";
 
 //--//
