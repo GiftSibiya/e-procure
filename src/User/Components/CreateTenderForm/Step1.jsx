@@ -6,9 +6,6 @@ import React, { useState } from "react";
 
 /// Import Files ///
 
-// Import style sheet
-import "./Step1.css";
-
 ///--///
 
 //--//

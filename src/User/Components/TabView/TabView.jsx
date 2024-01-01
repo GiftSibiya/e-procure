@@ -6,12 +6,9 @@ import React, { useState } from "react";
 
 /// Import Files ///
 
-// style sheet
-import "./TabView.css";
-
 // components
-import Applications from "./Applications/Applications";
-import Notifications from "./Notifications/Notifications";
+import Applications from "./Applications";
+import Notifications from "./Notifications";
 
 //--//
 
@@ -22,7 +19,7 @@ const ApplicationsContent = () => (
 );
 
 const NotificationsContent = () => (
-  <div className="tabHeader">
+  <div className="w-[75vw]">
     <Notifications />
   </div>
 );
@@ -37,9 +34,9 @@ const TabView = () => {
 
   return (
     <div>
-      <div className="tab-bar">
+      <div className="flex, my-12, w-[75vw]">
         <div
-          className={`tab ${
+          className={`flex-1 p-1 text-center rounded-md, cursor-pointer ${
             activeTab === "Applications" ? "active" : "unactive"
           }`}
           onClick={() => handleTabClick("Applications")}
@@ -47,7 +44,7 @@ const TabView = () => {
           Applications
         </div>
         <div
-          className={`tab ${
+          className={`flex-1 p-1 text-center rounded-md, cursor-pointer ${
             activeTab === "Notifications" ? "active" : "unactive"
           }`}
           onClick={() => handleTabClick("Notifications")}

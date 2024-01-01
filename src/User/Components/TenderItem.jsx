@@ -4,7 +4,6 @@ import axios from "axios";
 
 //-//
 /// Import Files ///
-import "./TenderItem.css";
 import { Link } from "react-router-dom";
 //--//
 
@@ -38,60 +37,67 @@ function TenderItem({ tender, onDelete }) {
   return (
     // main container
 
-    <section className="itemContainer">
-      <div className="tenderBox">
+    <section className="flex-col, justify-between, w-[20vw], h-[150px], my-1, rounded-2xl, p-1, bg-appGreen">
+      <div className="flex">
         {/* item Rows */}
 
-        <div className="itemRow">
+        <div className="h-full, flex-[1]">
           {/* item column 1*/}
 
-          <div className="itemColumn itemName">
-            <p className="itemHeader">Tender Name</p>
-            <p className="itemName__name">{tenderName}</p>
+          <div className="flex, border-grey border-[1px] ">
+            <p className="text-center">Tender Name</p>
+            <p className="font-[5px], w-full;, h-full, py-1">{tenderName}</p>
           </div>
         </div>
         {/* item Column 2 */}
 
-        <div className="itemRow2">
-          <div className="itemColumn PostDescription">
-            <p className="itemHeader">Description</p>
-            <p className="itemDescription">{tenderScope}</p>
+        <div className="h-full, flex[2]">
+          <div className="flex, border-grey border-[1px], h-full , flex-col. justify-start ">
+            <p className="text-center">Description</p>
+            <p className="items-center, font-[15px], h-full ">{tenderScope}</p>
           </div>
         </div>
         {/* item Column 3 */}
 
         <div className="itemRow">
-          <div className="itemColumn itemColumn3">
+          <div className="flex, border-grey border-[1px] , ">
             {/* Bid Bumber */}
             <div className="itemBid">
-              <p className="itemHeader">Bid No.</p>
+              <p className="text-center">Bid No.</p>
               <br />
-              <p className="itemPost__date">{tenderBid}</p>
+              <p className="text-center, text-[11px]">{tenderBid}</p>
             </div>
             {/* Posted Date */}
             <div className="itemPos">
-              <p className="itemHeader">Posted Date</p>
+              <p className="text-center">Posted Date</p>
               <br />
-              <p className="itemPost__date">{tenderIssue}</p>
+              <p className="text-center, text-[11px]">{tenderIssue}</p>
             </div>
             {/* Closing Date */}
             <div className="itemClosing">
-              <p className="itemHeader">Closing Date</p>
+              <p className="text-center">Closing Date</p>
               <br />
-              <p className="itemPost__date">{tenderClosing}</p>
+              <p className="text-center, text-[11px]">{tenderClosing}</p>
             </div>
           </div>
         </div>
       </div>
-      <div className="crudBar">
-        <div className="crudButttons">
+      <div className="flex, p-1, justify-center">
+        <div className="flex, py-1, justify-center, w-[80vw], rounded-md">
           <Link to={`/tender/${_id}`}>
-            <button className="crudBtn">View Details</button>
+            <button className="cursor-pointer, border-appGrey, mx-1, border-[1px]">
+              View Details
+            </button>
           </Link>
           <Link to={`/tender/${_id}/edit`}>
-            <button className="crudBtn">Edit Details</button>
+            <button className="cursor-pointer, border-appGrey, mx-1, border-[1px]">
+              Edit Details
+            </button>
           </Link>
-          <button className="crudBtn" onClick={handleDelete}>
+          <button
+            className="cursor-pointer, border-appGrey, mx-1, border-[1px]"
+            onClick={handleDelete}
+          >
             Delete Tender
           </button>
         </div>
