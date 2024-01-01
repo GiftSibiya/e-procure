@@ -19,7 +19,7 @@ function Aside() {
         <p className="aside__menu">Create Tender</p>
       </Link>
       <Link to={"/tenderView"}>
-        <p className="aside__menu">Your Tenders</p>
+        <p className=" text-3xl ">Your Tenders</p>
       </Link>
     </section>
   );

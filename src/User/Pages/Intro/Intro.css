@@ -60,6 +60,7 @@
   justify-content: center;
 }
 .TextField {
+  resize: none;
   margin-top: 10px;
   width: 30vw;
 }

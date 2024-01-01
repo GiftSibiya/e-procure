@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import HeaderComponent from "../../Components/Header/Header";
+import HeaderComponent from "../../Components/Header";
 import Aside from "../../Components/Aside/Aside";
 import TenderItem from "../../Components/TenderView/TenderItem";
 import axios from "axios";
