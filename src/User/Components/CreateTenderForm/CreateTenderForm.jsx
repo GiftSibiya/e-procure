@@ -6,9 +6,6 @@ import React, { useState } from "react";
 
 /// Import Files ///
 
-//style sheet
-import "./CreateTenderForm.css";
-
 // tab components
 import Step1 from "./Step1";
 import Step2 from "./Step2";
@@ -52,18 +49,20 @@ const TabView = () => {
   };
 
   return (
-    <section className="form">
-      <div className="form__header">Create New Tender</div>
-      <div className="tab-bar">
+    <section className="bg-appGrey rounded-md h-[880px]">
+      <div className="text-center m-4">Create New Tender</div>
+      <div className="flex items-center m-5">
         <div
-          className={`tab ${activeTab === "Step1" ? "active" : "unactive"}`}
+          className={`flex-1 p-[10px] text-center cursor-pointer ${
+            activeTab === "Step1" ? "active" : "unactive"
+          }`}
           onClick={() => handleTabClick("Step1")}
         >
           Step 1
         </div>
 
         <div
-          className={`tab ${activeTab === "Step2" ? "active" : "unactive"}`}
+          className={`tab ${activeTab === "Step2" ? "bg-appBlue" : "unactive"}`}
           onClick={() => handleTabClick("Step2")}
         >
           Step 2
@@ -88,7 +87,7 @@ const TabView = () => {
           Step5
         </div>
       </div>
-      <div className="tab-content">
+      <div className="w-[75vw]">
         {activeTab === "Step1" && <Step1Content />}
         {activeTab === "Step2" && <Step2Content />}
         {activeTab === "Step3" && <Step3Content />}
