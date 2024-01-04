@@ -4,8 +4,9 @@ import HeaderComponent from "../Components/Header";
 //--//
 
 import Aside from "../Components/Aside";
-import TenderItem from "../Components/TenderView/TenderItem";
+import TenderItem from "../Components/TenderItem";
 import axios from "axios";
+import Footer from "../Components/Footer";
 
 function TenderView() {
   const [tenders, setTenders] = useState([]);
@@ -45,6 +46,9 @@ function TenderView() {
           ))}
         </section>
       </body>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }

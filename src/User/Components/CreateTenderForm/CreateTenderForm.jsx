@@ -6,15 +6,12 @@ import React, { useState } from "react";
 
 /// Import Files ///
 
-//style sheet
-import "./CreateTenderForm.css";
-
 // tab components
-import Step1 from "./Step1/Step1";
-import Step2 from "./Step2/Step2";
-import Step3 from "./Step3/Step3";
-import Step4 from "./Step4/Step4";
-import Step5 from "./Step5/Step5";
+import Step1 from "./Step1";
+import Step2 from "./Step2";
+import Step3 from "./Step3";
+import Step4 from "./Step4";
+import Step5 from "./Step5";
 //--//
 
 const Step1Content = () => (
@@ -52,43 +49,63 @@ const TabView = () => {
   };
 
   return (
-    <section className="form">
-      <div className="form__header">Create New Tender</div>
-      <div className="tab-bar">
+    <section className="bg-appGrey rounded-3xl h-[990px]">
+      <div className="text-center m-4">Create New Tender</div>
+      <div className="flex  justify-between items-center m-5">
         <div
-          className={`tab ${activeTab === "Step1" ? "active" : "unactive"}`}
+          className={`flex p-[10px]  text-center cursor-pointer ${
+            activeTab === "Step1"
+              ? "bg-appBlue p-2 rounded-xl text-[white] cursor-pointer"
+              : "cursor-pointer hover:bg-appLightBlue"
+          }`}
           onClick={() => handleTabClick("Step1")}
         >
           Step 1
         </div>
 
         <div
-          className={`tab ${activeTab === "Step2" ? "active" : "unactive"}`}
+          className={` ${
+            activeTab === "Step2"
+              ? "bg-appBlue p-2 rounded-xl text-[white] cursor-pointer"
+              : "cursor-pointer hover:bg-appLightBlue p-2 rounded-lg"
+          }`}
           onClick={() => handleTabClick("Step2")}
         >
           Step 2
         </div>
 
         <div
-          className={`tab ${activeTab === "Step3" ? "active" : "unactive"}`}
+          className={`tab ${
+            activeTab === "Step3"
+              ? "bg-appBlue p-2 rounded-xl text-[white] cursor-pointer"
+              : "cursor-pointer hover:bg-appLightBlue p-2 rounded-lg"
+          }`}
           onClick={() => handleTabClick("Step3")}
         >
           Step 3
         </div>
         <div
-          className={`tab ${activeTab === "Step4" ? "active" : "unactive"}`}
+          className={`tab ${
+            activeTab === "Step4"
+              ? "bg-appBlue p-2 rounded-xl text-[white] cursor-pointer"
+              : "cursor-pointer hover:bg-appLightBlue p-2 rounded-lg"
+          }`}
           onClick={() => handleTabClick("Step4")}
         >
           Step4
         </div>
         <div
-          className={`tab ${activeTab === "Step5" ? "active" : "unactive"}`}
+          className={`tab ${
+            activeTab === "Step5"
+              ? "bg-appBlue p-2 rounded-xl text-[white] cursor-pointer"
+              : "cursor-pointer hover:bg-appLightBlue p-2 rounded-lg"
+          }`}
           onClick={() => handleTabClick("Step5")}
         >
           Step5
         </div>
       </div>
-      <div className="tab-content">
+      <div className="w-[75vw]">
         {activeTab === "Step1" && <Step1Content />}
         {activeTab === "Step2" && <Step2Content />}
         {activeTab === "Step3" && <Step3Content />}

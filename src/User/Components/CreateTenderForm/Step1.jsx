@@ -6,9 +6,6 @@ import React, { useState } from "react";
 
 /// Import Files ///
 
-// Import style sheet
-import "./Step1.css";
-
 ///--///
 
 //--//
@@ -58,16 +55,21 @@ function Step1() {
   };
 
   return (
-    <form className="tenderForm" method="post" onSubmit={handleSubmit}>
+    <form
+      className="flex  justify-between"
+      method="post"
+      onSubmit={handleSubmit}
+    >
       {" "}
-      <div className="tenderForm__info">Tender Details</div>
-      <div className="tenderForm__field">
-        <div className="row1">
+      <div className=" m-2 ">Tender Details</div>
+      <div className=" flex flex-col items-center m-2 h-[820px]  bg-backgroundColor rounded-3xl w-[60vw]">
+        {/* First Row For name and Bid Number  */}
+        <div className="flex m-10 justify-around w-full">
           {/* Name and Description */}
-          <div className="tenderForm__name">
+          <div className=" border-appRed">
             <p className="tenderForm__desciption">Tender Name / Description</p>
             <textarea
-              className="tenderForm__medium tendername"
+              className=" resize-none border-[1px] rounded-md h-[250px] w-[30vw]"
               type="text"
               name="tenderName"
               id=""
@@ -79,13 +81,13 @@ function Step1() {
 
           {/* Section 1 */}
 
-          <div className="tenderForm__section1">
+          <div className="w-[20vw]">
             {/* Bid Number */}
 
-            <div className="tenderForm__bid">
-              <p className="tenderForm__desciption">Bid Number</p>
+            <div className="">
+              <p className="">Bid Number</p>
               <textarea
-                className="tenderForm__small"
+                className="w-[18vw] p-2 h-[50px] resize-none border-[1px] rounded-md"
                 type="text"
                 name=" tenderBid"
                 id=""
@@ -97,10 +99,10 @@ function Step1() {
 
             {/* Issuing  Date */}
 
-            <div className="closing">
-              <p className="fieldDescription">Issue Date</p>
+            <div className="">
+              <p className="mt-2">Issue Date</p>
               <input
-                className="tenderForm__date"
+                className="w-[18vw] p-2 h-[50px] resize-none border-[1px] rounded-md"
                 type="Date"
                 name="tenderClosing"
                 id=""
@@ -112,9 +114,9 @@ function Step1() {
             {/* Closing Date */}
 
             <div className="closing">
-              <p className="fieldDescription">Closing Date</p>
+              <p className="mt-2">Closing Date</p>
               <input
-                className="tenderForm__date"
+                className="w-[18vw] p-2 h-[50px] resize-none border-[1px] rounded-md"
                 type="Date"
                 name="tenderClosing"
                 id=""
@@ -127,11 +129,11 @@ function Step1() {
 
         {/* Second Row */}
 
-        <div className="row2">
-          <div className="tenderForm__scope">
+        <div className="flex m-10 justify-around w-full ">
+          <div className="">
             <p className="fieldDescription">Scope Of Work</p>
             <textarea
-              className="tenderForm__textInput tenderInput--Large"
+              className="resize-none border-[1px] rounded-md h-[300px] w-[30vw]"
               type="text"
               name="tenderScope"
               id=""
@@ -140,42 +142,47 @@ function Step1() {
               onChange={(e) => setTenderScope(e.target.value)}
             />
           </div>
-          <div className="tenderForm__section2">
-            {/* Session Date an Time */}
+          <div className="w-[20vw] ">
+            <div className="tenderForm__section2">
+              {/* Session Date an Time */}
 
-            <div className="tenderForm__session">
-              <p className="fieldDescription">
-                NON-COMPULSORY BRIEFING SESSION DATE AND TIME
-              </p>
-              <input
-                className="tenderForm__textInput tenderForm__date {
-                  "
-                type="Date"
-                name="tenderSessionDate"
-                id=""
-                value={tenderSessionDate}
-                onChange={(e) => setTenderSessionDate(e.target.value)}
-              />
-              <input className="tenderForm__date" type="Time" name="" id="" />
-            </div>
+              <div className=" ">
+                <p className="fieldDescription">
+                  NON-COMPULSORY BRIEFING SESSION DATE AND TIME
+                </p>
+                <input
+                  className="w-[18vw] p-2 h-[50px] resize-none border-[1px] rounded-md"
+                  type="Date"
+                  name="tenderSessionDate"
+                  id=""
+                  value={tenderSessionDate}
+                  onChange={(e) => setTenderSessionDate(e.target.value)}
+                />
+                <input
+                  className=" my-2 w-[18vw] p-2 h-[50px] resize-none border-[1px] rounded-md"
+                  type="Time"
+                  name=""
+                  id=""
+                />
+              </div>
 
-            {/* Session Venue */}
-            <div className="tenderForm__session">
-              <p className="fieldDescription">BRIEFING SESSION VENUE</p>
-              <textarea
-                className="tenderForm__textInput tenderForm__medium {
-                  "
-                type="text"
-                name="tenderVenue"
-                id=""
-                placeholder="Breifing venue"
-                value={tenderVenue}
-                onChange={(e) => setTenderVenue(e.target.value)}
-              />
+              {/* Session Venue */}
+              <div className="tenderForm__session">
+                <p className="fieldDescription">BRIEFING SESSION VENUE</p>
+                <textarea
+                  className="w-[18vw] p-2 h-[50px] resize-none border-[1px] rounded-md"
+                  type="text"
+                  name="tenderVenue"
+                  id=""
+                  placeholder="Breifing venue"
+                  value={tenderVenue}
+                  onChange={(e) => setTenderVenue(e.target.value)}
+                />
+              </div>
             </div>
           </div>
         </div>
-        <button className="tenderForm__small" type="submit">
+        <button className="bg-appGreen w-[100px] rounded-lg m-2" type="submit">
           {" "}
           Submit
         </button>

@@ -7,7 +7,7 @@ import React from "react";
 
 //components
 import HeaderComponent from "./Components/Header";
-import Footer from "./Components/Footer/Footer";
+import Footer from "./Components/Footer";
 import TabView from "./Components/TabView/TabView";
 import Aside from "./Components/Aside";
 
