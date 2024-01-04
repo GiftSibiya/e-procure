@@ -49,12 +49,14 @@ const TabView = () => {
   };
 
   return (
-    <section className="bg-appGrey rounded-md h-[880px]">
+    <section className="bg-appGrey rounded-3xl h-[990px]">
       <div className="text-center m-4">Create New Tender</div>
-      <div className="flex items-center m-5">
+      <div className="flex  justify-between items-center m-5">
         <div
-          className={`flex-1 p-[10px] text-center cursor-pointer ${
-            activeTab === "Step1" ? "active" : "unactive"
+          className={`flex p-[10px]  text-center cursor-pointer ${
+            activeTab === "Step1"
+              ? "bg-appBlue p-2 rounded-xl text-[white] cursor-pointer"
+              : "cursor-pointer hover:bg-appLightBlue"
           }`}
           onClick={() => handleTabClick("Step1")}
         >
@@ -62,26 +64,42 @@ const TabView = () => {
         </div>
 
         <div
-          className={`tab ${activeTab === "Step2" ? "bg-appBlue" : "unactive"}`}
+          className={` ${
+            activeTab === "Step2"
+              ? "bg-appBlue p-2 rounded-xl text-[white] cursor-pointer"
+              : "cursor-pointer hover:bg-appLightBlue p-2 rounded-lg"
+          }`}
           onClick={() => handleTabClick("Step2")}
         >
           Step 2
         </div>
 
         <div
-          className={`tab ${activeTab === "Step3" ? "active" : "unactive"}`}
+          className={`tab ${
+            activeTab === "Step3"
+              ? "bg-appBlue p-2 rounded-xl text-[white] cursor-pointer"
+              : "cursor-pointer hover:bg-appLightBlue p-2 rounded-lg"
+          }`}
           onClick={() => handleTabClick("Step3")}
         >
           Step 3
         </div>
         <div
-          className={`tab ${activeTab === "Step4" ? "active" : "unactive"}`}
+          className={`tab ${
+            activeTab === "Step4"
+              ? "bg-appBlue p-2 rounded-xl text-[white] cursor-pointer"
+              : "cursor-pointer hover:bg-appLightBlue p-2 rounded-lg"
+          }`}
           onClick={() => handleTabClick("Step4")}
         >
           Step4
         </div>
         <div
-          className={`tab ${activeTab === "Step5" ? "active" : "unactive"}`}
+          className={`tab ${
+            activeTab === "Step5"
+              ? "bg-appBlue p-2 rounded-xl text-[white] cursor-pointer"
+              : "cursor-pointer hover:bg-appLightBlue p-2 rounded-lg"
+          }`}
           onClick={() => handleTabClick("Step5")}
         >
           Step5

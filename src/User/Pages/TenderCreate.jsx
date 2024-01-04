@@ -3,6 +3,7 @@
 import React from "react";
 import HeaderComponent from "../Components/Header";
 import Aside from "../Components/Aside";
+import Footer from "../Components/Footer";
 import CreateTenderForm from "../Components/CreateTenderForm/CreateTenderForm";
 
 //--//
@@ -24,6 +25,9 @@ export default function TenderCreate() {
 
         <main></main>
       </body>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }
