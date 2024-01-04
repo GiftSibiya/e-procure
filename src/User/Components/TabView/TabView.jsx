@@ -34,9 +34,9 @@ const TabView = () => {
 
   return (
     <div>
-      <div className="flex, my-12, w-[75vw]">
+      <div className="flex my-12 w-[75vw]">
         <div
-          className={`flex-1 p-1 text-center rounded-md, cursor-pointer ${
+          className={`flex-1 p-1 text-center rounded-md cursor-pointer ${
             activeTab === "Applications" ? "active" : "unactive"
           }`}
           onClick={() => handleTabClick("Applications")}
@@ -44,7 +44,7 @@ const TabView = () => {
           Applications
         </div>
         <div
-          className={`flex-1 p-1 text-center rounded-md, cursor-pointer ${
+          className={`flex-1 p-1 text-center rounded-md cursor-pointer ${
             activeTab === "Notifications" ? "active" : "unactive"
           }`}
           onClick={() => handleTabClick("Notifications")}

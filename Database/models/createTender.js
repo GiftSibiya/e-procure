@@ -8,6 +8,7 @@ const tenderSchema = new mongoose.Schema({
   tenderClosing: String,
   tenderSessionDate: String,
   tenderVenue: String,
+  tenderPreQual: String,
 });
 
 const Tender = mongoose.model("Tender", tenderSchema);

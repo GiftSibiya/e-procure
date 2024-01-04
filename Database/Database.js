@@ -3,7 +3,7 @@
 require("dotenv").config();
 const express = require("express");
 const connectToDb = require("./ConnectToDb");
-const Tender = require("./models/step1");
+const Tender = require("./models/createTender");
 const cors = require("cors");
 //--//
 
@@ -32,6 +32,7 @@ app.post("/tenders", async (req, res) => {
   const tenderClosing = req.body.tenderClosing;
   const tenderSessionDate = req.body.tenderSessionDate;
   const tenderVenue = req.body.tenderVenue;
+  const tenderPreQual = req.body.tenderPreQual;
 
   // Create a tender
   const tender = await Tender.create({
@@ -42,6 +43,7 @@ app.post("/tenders", async (req, res) => {
     tenderClosing: tenderClosing,
     tenderSessionDate: tenderSessionDate,
     tenderVenue: tenderVenue,
+    tenderPreQual: tenderPreQual,
   });
 
   // Sespond with sent note
@@ -90,16 +92,18 @@ app.get("/tenderView", async (req, res) => {
         tenderClosing,
         tenderSessionDate,
         tenderVenue,
+        tenderPreQual,
       } = tender;
-      // console.log(`Tender ID: ${_id}`);
-      // console.log(`Tender Name: ${tenderName}`);
-      // console.log(`Tender Scope: ${tenderScope}`);
-      // console.log(`Tender Bid: ${tenderBid}`);
-      // console.log(`Tender Issue: ${tenderIssue}`);
-      // console.log(`Tender Closing: ${tenderClosing}`);
-      // console.log(`Tender Session Date: ${tenderSessionDate}`);
-      // console.log(`Tender Venue: ${tenderVenue}`);
-      // console.log("---------------");
+      console.log(`Tender ID: ${_id}`);
+      console.log(`Tender Name: ${tenderName}`);
+      console.log(`Tender Scope: ${tenderScope}`);
+      console.log(`Tender Bid: ${tenderBid}`);
+      console.log(`Tender Issue: ${tenderIssue}`);
+      console.log(`Tender Closing: ${tenderClosing}`);
+      console.log(`Tender Session Date: ${tenderSessionDate}`);
+      console.log(`Tender Venue: ${tenderVenue}`);
+      console.log(`Tender Venue: ${tenderPreQual}`);
+      console.log("---------------");
     });
 
     res.json({ tenders: allTenders });

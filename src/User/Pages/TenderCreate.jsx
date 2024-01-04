@@ -25,9 +25,9 @@ export default function TenderCreate() {
 
         <main></main>
       </body>
-      <footer>
+      {/* <footer>
         <Footer />
-      </footer>
+      </footer> */}
     </>
   );
 }

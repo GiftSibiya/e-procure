@@ -9,7 +9,7 @@ import React, { useState } from "react";
 ///--///
 
 //--//
-function Step1() {
+function Step1(onSubmitStep1) {
   const [tenderName, setTenderName] = useState("");
   const [tenderScope, setTenderScope] = useState("");
   const [tenderBid, setTenderBid] = useState("");
@@ -17,6 +17,7 @@ function Step1() {
   const [tenderClosing, setTenderClosing] = useState("");
   const [tenderSessionDate, setTenderSessionDate] = useState("");
   const [tenderVenue, setTenderVenue] = useState("");
+  const [tenderPreQual, setTenderPreQual] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -34,6 +35,7 @@ function Step1() {
           tenderClosing,
           tenderSessionDate,
           tenderVenue,
+          tenderPreQual,
         }),
       });
 
@@ -42,6 +44,7 @@ function Step1() {
         localStorage.setItem("tender", JSON.stringify(result));
         console.log("Data has been sent to mongo", result);
         alert("Tender has been submited");
+        onSubmitStep1();
 
         // Redirect the user to user page
 
@@ -56,13 +59,13 @@ function Step1() {
 
   return (
     <form
-      className="flex  justify-between"
+      className="flex  justify-between h-[1200px]"
       method="post"
       onSubmit={handleSubmit}
     >
       {" "}
       <div className=" m-2 ">Tender Details</div>
-      <div className=" flex flex-col items-center m-2 h-[820px]  bg-backgroundColor rounded-3xl w-[60vw]">
+      <div className=" flex flex-col items-center m-2 h-[1100px] bg-backgroundColor rounded-3xl w-[60vw]">
         {/* First Row For name and Bid Number  */}
         <div className="flex m-10 justify-around w-full">
           {/* Name and Description */}
@@ -182,10 +185,31 @@ function Step1() {
             </div>
           </div>
         </div>
-        <button className="bg-appGreen w-[100px] rounded-lg m-2" type="submit">
-          {" "}
-          Submit
-        </button>
+        {/* PRE QUAL */}
+        <span>Step 2 </span>
+        <div className=" flex flex-col items-center m-2 h-[100px]  bg-backgroundColor rounded-3xl w-[60vw]">
+          <div className="flex m-10 justify-around w-full">
+            <div className=" border-appRed">
+              <p className="tenderForm__desciption">Enter Pre Qualifiers</p>
+              <textarea
+                className=" resize-none border-[1px] rounded-md h-[100px] w-[30vw]"
+                type="text"
+                name="tenderName"
+                id=""
+                placeholder="Enter Your Pre-Qualifiers Here"
+                value={tenderPreQual}
+                onChange={(e) => setTenderPreQual(e.target.value)}
+              />
+            </div>
+          </div>
+          <button
+            className="bg-app w-[100px] rounded-lg m-2"
+            type="submit"
+            onClick={handleSubmit}
+          >
+            Submit
+          </button>
+        </div>
       </div>
     </form>
   );

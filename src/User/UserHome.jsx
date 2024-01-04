@@ -15,11 +15,11 @@ import Aside from "./Components/Aside";
 export default function UserHome() {
   return (
     <>
-      <body className="flex-col">
+      <body className="flex flex-col  h-[500px]">
         <header className="w-full border-red ">
           <HeaderComponent />
         </header>
-        <section className="flex ">
+        <section className="flex  h-full ">
           <Aside />
           <main>
             <section className="bg-appOrange h-20 rounded-2xl my-2 text-center">
