@@ -1,4 +1,4 @@
-/// Import Dependencies ///
+/// DEPENDENCY IMPORTS ///
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 //--//
