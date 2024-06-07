@@ -4,21 +4,19 @@ import { Link } from "react-router-dom";
 export default function Intro() {
   return (
     <>
-      <div className="flex justify-center items-center w-full h-full">
-        <div className="flex w-[90vw] rounded-md bg-backgroundColor">
+      <div className="flex justify-center items-center w-full h-screen ">
+        <div className="flex w-[90vw] h-[500px] rounded-md bg-backgroundColor">
           {/*THIS IS THE LEFT SIDE CONTENT */}
 
-          <div className="flex-col justify-center items-center h-90 w-[55%] rounded-l-lg bg-appBlue">
-            <div className="flex h-[20vh] items-center justify-around">
-              <h1 className="">E-PROCUREMENT</h1>
-              <p className="">
-                You're number 1 electronic procurement solution
-              </p>
+          <div className="flex items-center w-[50vw] rounded-l-lg bg-appBlue ">
+            <div className="flex-col h-[200px] w-full  border-2 ">
+              <h1 className="text-backgroundColor font-semibold text-[2rem] text-center mb-[10px]">E-PROCUREMENT</h1>
+              <p className="text-center ">You're number 1 electronic procurement solution</p>
+              <p className="text-center items-center ">
+                Say goodbuy to endless paperwork. <br/>
+                View and create tender RFQ's the
+                21st centuary way</p>
             </div>
-            <p className="mt-40 items-center">
-              Say goodbuy to endless paperwork. View and create tender RFQ's the
-              21st centuary way
-            </p>
           </div>
           {/* */}
 
