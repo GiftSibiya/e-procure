@@ -11,7 +11,7 @@ module.exports = {
       appOrange: "#f2d096",
       appRed: "#ed8975",
       app: "#ed8975",
-      appTextWhite: "#d5d5d5",
+      appTextWhite: "#ffffff",
     },
     extend: {},
   },

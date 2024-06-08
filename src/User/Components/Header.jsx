@@ -9,7 +9,7 @@ const HeaderComponent = () => {
     <>
       <header>
         <div className="w-full h-20 items-center justify-between flex bg-appBlue ">
-          <h1 className="  font-bold text-appTextWhite">E-PROCURE</h1>
+          <h1 className="  font-bold text-appTextWhite mx-2">E-PROCURE</h1>
           <div className="w-[500px] justify-around flex  items-center ">
             <Link to="/user" className=" text-appTextWhite ">
               Home

@@ -1,4 +1,4 @@
-/// Import Dependencies ///
+/// Dependencies ///
 
 import React, { useState } from "react";
 
@@ -29,27 +29,17 @@ const TabView = () => {
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
-    // You can add additional logic or state updates based on the selected tab
   };
 
   return (
     <div>
-      <div className="flex, my-12, w-[75vw]">
-        <div
-          className={`flex-1 p-1 text-center rounded-md, cursor-pointer ${
-            activeTab === "Applications" ? "active" : "unactive"
-          }`}
-          onClick={() => handleTabClick("Applications")}
-        >
-          Applications
+      <div className="flex  w-[75vw] ">
+        <div className={`flex-1 p-1 text-center rounded-md, cursor-pointer ${ activeTab === "Applications" ? "bg-appGreen text-appTextWhite rounded-xl" : "unactive"}`}
+          onClick={() => handleTabClick("Applications")}>Applications
         </div>
         <div
-          className={`flex-1 p-1 text-center rounded-md, cursor-pointer ${
-            activeTab === "Notifications" ? "active" : "unactive"
-          }`}
-          onClick={() => handleTabClick("Notifications")}
-        >
-          Notifications
+          className={`flex-1 p-1 text-center rounded-md, cursor-pointer ${ activeTab === "Notifications" ? "bg-appGreen text-appTextWhite rounded-xl" : "unactive"}`}
+          onClick={() => handleTabClick("Notifications")}>Notifications
         </div>
       </div>
       <div className="tab-content">
