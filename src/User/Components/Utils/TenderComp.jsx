@@ -19,14 +19,27 @@ export default function TenderComp() {
               </div>
               <div className='m-1'>
                 <p className='font-semibold text-appTextWhite text-center'>Status</p>
-                <p className='font-semibold text-center'>2024-01-02</p>
+                <p className='font-semibold text-center'>Pending</p>
               </div>
-            
             </div>
           </div>
         </div>
       </div>
-      <div className=" w-[30%]"></div>
+      <div className="flex items-center border-2 w-[30%]">
+        <div className="flex flex-col justify-between h-full w-[200px]">
+          <div className="border">
+            <p className='text-sm'>Submitted By:</p>
+            <p className='text-sm'>This person here</p>
+          </div>
+          <div className="border">
+            <p className='text-sm'>Submitted At:</p>
+            <p className='text-sm'>02-Feb-2024</p>
+          </div>
+        </div>
+        <div className="flex justify-center items-center ml-[20px] rounded-2xl h-[80px] w-[80px] border-2 cursor-pointer">
+          <p className='text-center'>View</p>
+        </div>
+      </div>
     </section>
   )
 }
