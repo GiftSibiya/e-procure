@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 function Aside() {
   return (
-    <section className="flex flex-col h-[80vh] m-2 bg-appGreen p-2 rounded-lg w-[150px] ">
+    <section className="flex flex-col h-[80vh] m-2 bg-green-300 p-2 rounded-lg w-[300px] ">
       <h4 className="my-2 text-backgroundColor font-semibold text-center">Tenders</h4>
       <Link to="/tenderCreate">
         <p className="text-[14px] text-backgroundColor my-1">Create Tender</p>

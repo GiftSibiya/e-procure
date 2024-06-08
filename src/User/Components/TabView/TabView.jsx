@@ -13,13 +13,13 @@ import Notifications from "./Notifications";
 //--//
 
 const ApplicationsContent = () => (
-  <div className="tabHeader">
+  <div className="">
     <Applications />
   </div>
 );
 
 const NotificationsContent = () => (
-  <div className="w-[75vw]">
+  <div className="">
     <Notifications />
   </div>
 );
@@ -33,12 +33,12 @@ const TabView = () => {
 
   return (
     <div>
-      <div className="flex  w-[75vw] ">
-        <div className={`flex-1 p-1 text-center rounded-md, cursor-pointer ${ activeTab === "Applications" ? "bg-appGreen text-appTextWhite rounded-xl" : "unactive"}`}
+      <div className="flex w-[70vw]">
+        <div className={`flex-1 p-1 text-center rounded-md, cursor-pointer ${ activeTab === "Applications" ? "bg-slate-200 text-appTextWhite rounded-xl font-semibold" : "unactive"}`}
           onClick={() => handleTabClick("Applications")}>Applications
         </div>
         <div
-          className={`flex-1 p-1 text-center rounded-md, cursor-pointer ${ activeTab === "Notifications" ? "bg-appGreen text-appTextWhite rounded-xl" : "unactive"}`}
+          className={`flex-1 p-1 text-center rounded-md, cursor-pointer ${ activeTab === "Notifications" ? "bg-slate-200 text-appTextWhite rounded-xl font-semibold" : "unactive"}`}
           onClick={() => handleTabClick("Notifications")}>Notifications
         </div>
       </div>
